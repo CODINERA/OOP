@@ -1,4 +1,4 @@
-﻿Public Class Form1
+Public Class Form1
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
 
     End Sub
@@ -12,7 +12,34 @@
 
     Private Sub Guna2HtmlLabel1_Click(sender As Object, e As EventArgs) Handles Guna2HtmlLabel1.Click
 
+
     End Sub
+
+    Private Function ValidateInputs() As Boolean
+        If String.IsNullOrWhiteSpace(txtEmail.Text) Then
+            MessageBox.Show("Email cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End If
+        If String.IsNullOrWhiteSpace(txtPassword.Text) Then
+            MessageBox.Show("Password cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        End If
+        Return True
+    End Function
+
+    Private Function CheckAccountExists(email As String, password As String) As Boolean
+        Dim hashedPassword As String = ""
+        Using connection As New MySqlConnection(connectionString)
+            connection.Open()
+
+            ' Retrieve the hashed password for the email
+            Dim query As String = "SELECT Password FROM users WHERE Email = @Email"
+            Using command As New MySqlCommand(query, connection)
+                command.Parameters.AddWithValue("@Email", email)
+                hashedPassword = Convert.ToString(command.ExecuteScalar())
+            End Using
+        End Using
+
 
     Private Sub Guna2HtmlLabel3_Click(sender As Object, e As EventArgs) Handles Guna2HtmlLabel3.Click
 
@@ -53,4 +80,5 @@
     Private Sub Guna2Button7_Click(sender As Object, e As EventArgs) Handles Guna2Button7.Click
         Me.Close()
     End Sub
+    
 End Class
