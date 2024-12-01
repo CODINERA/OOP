@@ -23,17 +23,22 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(components)
         Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(components)
@@ -50,9 +55,13 @@ Partial Class Form1
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         chkShowPassword = New Guna.UI2.WinForms.Guna2CheckBox()
+        Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Guna2Panel1.SuspendLayout()
         CType(Guna2CirclePictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Guna2PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Guna2Elipse1
@@ -76,12 +85,12 @@ Partial Class Form1
         ' 
         ' Guna2PictureBox1
         ' 
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges1
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges5
         Guna2PictureBox1.Image = My.Resources.Resources.bgblurred2
         Guna2PictureBox1.ImageRotate = 0F
         Guna2PictureBox1.Location = New Point(314, -1)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2PictureBox1.Size = New Size(325, 402)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox1.TabIndex = 0
@@ -90,11 +99,11 @@ Partial Class Form1
         ' Guna2HtmlLabel1
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Copperplate Gothic Light", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel1.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Guna2HtmlLabel1.ForeColor = Color.Black
         Guna2HtmlLabel1.Location = New Point(64, 20)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(67, 16)
+        Guna2HtmlLabel1.Size = New Size(55, 18)
         Guna2HtmlLabel1.TabIndex = 2
         Guna2HtmlLabel1.Text = "FitCheck"
         ' 
@@ -129,7 +138,7 @@ Partial Class Form1
         txtEmail.BackgroundImageLayout = ImageLayout.None
         txtEmail.BorderColor = Color.Black
         txtEmail.BorderRadius = 10
-        txtEmail.CustomizableEdges = CustomizableEdges4
+        txtEmail.CustomizableEdges = CustomizableEdges8
         txtEmail.DefaultText = ""
         txtEmail.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtEmail.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -145,7 +154,7 @@ Partial Class Form1
         txtEmail.PlaceholderForeColor = Color.Black
         txtEmail.PlaceholderText = "Email:"
         txtEmail.SelectedText = ""
-        txtEmail.ShadowDecoration.CustomizableEdges = CustomizableEdges5
+        txtEmail.ShadowDecoration.CustomizableEdges = CustomizableEdges9
         txtEmail.Size = New Size(270, 27)
         txtEmail.TabIndex = 5
         ' 
@@ -154,7 +163,7 @@ Partial Class Form1
         txtPassword.BackColor = Color.Transparent
         txtPassword.BorderColor = Color.Black
         txtPassword.BorderRadius = 10
-        txtPassword.CustomizableEdges = CustomizableEdges6
+        txtPassword.CustomizableEdges = CustomizableEdges10
         txtPassword.DefaultText = ""
         txtPassword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtPassword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -170,7 +179,7 @@ Partial Class Form1
         txtPassword.PlaceholderForeColor = Color.Black
         txtPassword.PlaceholderText = "Password:"
         txtPassword.SelectedText = ""
-        txtPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges7
+        txtPassword.ShadowDecoration.CustomizableEdges = CustomizableEdges11
         txtPassword.Size = New Size(270, 27)
         txtPassword.TabIndex = 6
         ' 
@@ -179,7 +188,7 @@ Partial Class Form1
         btnLogin.Animated = True
         btnLogin.BackColor = Color.Transparent
         btnLogin.BorderRadius = 10
-        btnLogin.CustomizableEdges = CustomizableEdges8
+        btnLogin.CustomizableEdges = CustomizableEdges12
         btnLogin.DisabledState.BorderColor = Color.DarkGray
         btnLogin.DisabledState.CustomBorderColor = Color.DarkGray
         btnLogin.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -189,7 +198,7 @@ Partial Class Form1
         btnLogin.ForeColor = Color.White
         btnLogin.Location = New Point(26, 289)
         btnLogin.Name = "btnLogin"
-        btnLogin.ShadowDecoration.CustomizableEdges = CustomizableEdges9
+        btnLogin.ShadowDecoration.CustomizableEdges = CustomizableEdges13
         btnLogin.Size = New Size(270, 27)
         btnLogin.TabIndex = 9
         btnLogin.Text = "Login"
@@ -230,10 +239,10 @@ Partial Class Form1
         Guna2Panel1.Controls.Add(Guna2HtmlLabel5)
         Guna2Panel1.Controls.Add(Guna2HtmlLabel1)
         Guna2Panel1.Controls.Add(btnLogin)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges10
+        Guna2Panel1.CustomizableEdges = CustomizableEdges14
         Guna2Panel1.Location = New Point(0, -1)
         Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges11
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges15
         Guna2Panel1.Size = New Size(317, 405)
         Guna2Panel1.TabIndex = 14
         ' 
@@ -243,7 +252,7 @@ Partial Class Form1
         Guna2CirclePictureBox1.ImageRotate = 0F
         Guna2CirclePictureBox1.Location = New Point(12, 6)
         Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
-        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges3
+        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges7
         Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Guna2CirclePictureBox1.Size = New Size(49, 43)
         Guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
@@ -268,12 +277,42 @@ Partial Class Form1
         chkShowPassword.UncheckedState.BorderThickness = 0
         chkShowPassword.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         ' 
+        ' Guna2PictureBox2
+        ' 
+        Guna2PictureBox2.Cursor = Cursors.SizeNS
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges3
+        Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
+        Guna2PictureBox2.ImageRotate = 0F
+        Guna2PictureBox2.Location = New Point(585, 12)
+        Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2PictureBox2.Size = New Size(33, 25)
+        Guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        Guna2PictureBox2.TabIndex = 15
+        Guna2PictureBox2.TabStop = False
+        ' 
+        ' Guna2PictureBox3
+        ' 
+        Guna2PictureBox3.Cursor = Cursors.SizeNS
+        Guna2PictureBox3.CustomizableEdges = CustomizableEdges1
+        Guna2PictureBox3.Image = CType(resources.GetObject("Guna2PictureBox3.Image"), Image)
+        Guna2PictureBox3.ImageRotate = 0F
+        Guna2PictureBox3.Location = New Point(546, 12)
+        Guna2PictureBox3.Name = "Guna2PictureBox3"
+        Guna2PictureBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2PictureBox3.Size = New Size(33, 25)
+        Guna2PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        Guna2PictureBox3.TabIndex = 17
+        Guna2PictureBox3.TabStop = False
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(0), CByte(192), CByte(0))
         ClientSize = New Size(640, 400)
+        Controls.Add(Guna2PictureBox3)
+        Controls.Add(Guna2PictureBox2)
         Controls.Add(Guna2PictureBox1)
         Controls.Add(Guna2Panel1)
         FormBorderStyle = FormBorderStyle.None
@@ -284,6 +323,8 @@ Partial Class Form1
         Guna2Panel1.ResumeLayout(False)
         Guna2Panel1.PerformLayout()
         CType(Guna2CirclePictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(Guna2PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
@@ -302,5 +343,7 @@ Partial Class Form1
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents chkShowPassword As Guna.UI2.WinForms.Guna2CheckBox
     Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
+    Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
 
 End Class

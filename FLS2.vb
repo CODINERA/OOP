@@ -22,7 +22,24 @@ Public Class FLS2
 
     Private Sub FLS2Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         sqlConn.ConnectionString = "server=" + Server + ";user id=" + username + ";password=" + password + ";database=" + database + ";"
+
+        ' Set properties for Guna2PictureBox controls
+        Guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        Guna2PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+
     End Sub
+
+    ' Exit button click event
+    Private Sub Guna2PictureBox2_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox2.Click
+        ' Close the application when the Exit button is clicked
+        Me.Close()
+    End Sub
+
+    ' Maximize button click event
+    Private Sub Guna2PictureBox3_Click(sender As Object, e As EventArgs)
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
 
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles backButton.Click
         Dim fls1Form As New FLS1()
@@ -103,6 +120,9 @@ Public Class FLS2
         weekly_goal = 1
     End Sub
 
+    Private Sub Guna2Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel1.Paint
+
+    End Sub
 End Class
 
 

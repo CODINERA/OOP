@@ -1,26 +1,33 @@
-﻿Imports Guna.UI2.WinForms
-Imports MySql.Data.MySqlClient
-Imports Microsoft.VisualBasic.ApplicationServices
-Imports Microsoft.Win32
-Imports Org.BouncyCastle.Crypto.Generators
+﻿Imports MySql.Data.MySqlClient
 
 Public Class Form1
+    ' Database connection string
     Private connectionString As String = "server=localhost;user id=root;password=;database=fitcheck;"
 
+    ' Form Load Event
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Set the password character for txtPassword
         txtPassword.PasswordChar = "•"c
 
-        Try
-            Using sqlConn As New MySqlConnection(connectionString)
-                sqlConn.Open()
-                ''  MessageBox.Show("Connection successful")
-                sqlConn.Close()
-            End Using
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+        ' Set properties for Guna2PictureBox controls
+        Guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        Guna2PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+
     End Sub
 
+    ' Exit button click event
+    Private Sub Guna2PictureBox2_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox2.Click
+        ' Close the application when the Exit button is clicked
+        Me.Close()
+    End Sub
+
+    ' Maximize button click event
+    Private Sub Guna2PictureBox3_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+
+    ' Login button click event
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         ' Validate user inputs
         If Not ValidateInputs() Then
@@ -52,7 +59,7 @@ Public Class Form1
         End If
     End Sub
 
-
+    ' Validate user inputs
     Private Function ValidateInputs() As Boolean
         If String.IsNullOrWhiteSpace(txtEmail.Text) Then
             MessageBox.Show("Username cannot be empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -65,6 +72,7 @@ Public Class Form1
         Return True
     End Function
 
+    ' Check if the account exists in the database
     Private Function CheckAccountExists(email As String, password As String) As Boolean
         Dim hashedPassword As String = ""
         Using connection As New MySqlConnection(connectionString)
@@ -87,7 +95,7 @@ Public Class Form1
         Return BCrypt.Net.BCrypt.Verify(password, hashedPassword)
     End Function
 
-
+    ' Check if FLS1 is completed
     Private Function IsFLS1Completed(email As String) As Boolean
         Using connection As New MySqlConnection(connectionString)
             connection.Open()
@@ -100,6 +108,7 @@ Public Class Form1
         End Using
     End Function
 
+    ' Check if FLS2 is completed
     Private Function IsFLS2Completed(email As String) As Boolean
         Using connection As New MySqlConnection(connectionString)
             connection.Open()
@@ -112,12 +121,14 @@ Public Class Form1
         End Using
     End Function
 
+    ' Sign up click event
     Private Sub lblSignUp_Click(sender As Object, e As EventArgs) Handles lblSignUp.Click
         Dim creationOfAccountForm As New CreationOfAccount()
         creationOfAccountForm.Show()
         Me.Hide()
     End Sub
 
+    ' Show password checkbox changed
     Private Sub chkShowPassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
         If chkShowPassword.Checked Then
             txtPassword.PasswordChar = ControlChars.NullChar
@@ -126,6 +137,7 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Guna2PictureBox3_Click_1(sender As Object, e As EventArgs) Handles Guna2PictureBox3.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
 End Class
-
-

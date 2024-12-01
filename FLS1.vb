@@ -177,6 +177,13 @@ Public Class FLS1
         txtBMI.Text = BMI.ToString("F2") ' Format to two decimal places
     End Sub
 
+    Private Sub Guna2PictureBox2_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox2.Click
+        Me.Close()
+    End Sub
+
+    Private Sub Guna2PictureBox3_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox3.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
 End Class
 
 
